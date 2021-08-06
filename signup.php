@@ -1,6 +1,9 @@
 <?php
 
-include("configs.php");
+error_reporting(0);
+
+require_once("sheets.php");
+require_once("configs.php");
 
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -14,6 +17,37 @@ $motivation = $_POST['motivation'];
 $referral = $_POST['referral'];
 $privacy_agreed = $_POST['privacy_agreed'];
 
+$remap = array(
+    "7667"  => "CC",
+    "7668"  => "CN",
+    "7669"  => "CS",
+    "7671"  => "Kandy",
+    "7670"  => "USJ",
+    "7672"  => "Ruhuna",
+    "7673"  => "SLIIT",
+    "21790" => "Unemployed",
+    "21789" => "Employed",
+    "21791" => "Self-Employed",
+    "21977" => "Connect with the Impact of AIESEC",
+    "21976" => "Global Networking",
+    "21975" => "Leadership Experience",
+    "21974" => "Personal Development",
+    "21799" => "From a friend",
+    "21809" => "Event",
+    "21810" => "Email",
+    "21802" => "Facebook",
+    "21805" => "Instagram",
+    "21806" => "LinkedIn",
+    "21807" => "Other Social Media",
+    "21813" => "Media (magazine, TV, newspaper or radio)",
+    "21809" => "Uni Session or Presentation",
+    "21808" => "Search Engine",
+    "21800" => "Information Booth on Campus",
+    "21814" => "Other",
+    "21794" => "Email",
+    "21792" => "WhatsApp"
+);
+
 $home_lc_ids = array(
     "7667" => "222",    // CC
     "7668" => "872",    // CN
@@ -23,6 +57,23 @@ $home_lc_ids = array(
     "7672" => "2175",   // Ruhuna
     "7673" => "2188"    // SLIIT
 );
+
+try {
+    append([[
+        $first_name . " " . $last_name,
+        $dob,
+        $email,
+        $phone,
+        $remap[$preferred_contact],
+        $remap[$university],
+        $remap[$employment_status],
+        $remap[$motivation],
+        $remap[$referral]
+    ]]);
+} catch (Exception $e) {
+    $output = json_encode(array('errors' => [array('message' => "Unable to remap.")]));
+    die($output);
+}
 
 $memberLead["academic_level_id"] = 21796;
 $memberLead["alignment_id"] = intval($university);
