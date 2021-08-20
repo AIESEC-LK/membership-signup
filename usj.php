@@ -165,6 +165,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                             <div class="input-group">
                                 <label class="label">First Name<span class="required_field"> *</span></label>
                                 <input class="input--style-4" type="text" name="first_name" required >
+                                <input class="input--style-4" type="hidden" name="university" value=7670 required >
                             </div>
                         </div>
                         <div class="col-2">
@@ -205,24 +206,6 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
                                 <option value="21794">Email</option>
                                 <option value="21792">WhatsApp</option>
-                            </select>
-                            <div class="select-dropdown"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="input-group">
-                        <label class="label">University or Institute<span class="required_field"> *</span></label>
-                        <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="university" required>
-                                <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
-                                <option value=7667>University of Colombo</option>
-                                <option value=7668>University of Kelaniya</option>
-                                <option value=7669>University of Moratuwa</option>
-                                <option value=7671>University of Peradeniya</option>
-                                <option value=7670>University of Sri Jayewardenepura</option>
-                                <option value=7672>University of Ruhuna</option>
-                                <option value=7673>Sri Lanka Institute of Information Technology</option>
                             </select>
                             <div class="select-dropdown"></div>
                         </div>
