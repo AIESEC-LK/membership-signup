@@ -10,7 +10,6 @@ $client->setAccessType('offline');
 $client->setAuthConfig(__DIR__ . '/credentials.json');
 $sheet_service = new Google_Service_Sheets($client);
 
-
 $spreadsheetId = $config["spreadsheet_id"];
 
 function append($values){
