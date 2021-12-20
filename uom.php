@@ -187,7 +187,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                     <div>
                         <div class="input-group">
                             <label class="label">Email Address<span class="required_field"> *</span></label>
-                            <input class="input--style-4" type="email" name="email" required >
+                            <input class="input--style-4" type="email" name="email" required>
                         </div>
                     </div>
 
@@ -196,6 +196,51 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                         <div class="input-group">
                             <label class="label">Phone Number<span class="required_field"> *</span></label>
                             <input class="input--style-4" type="tel" placeholder="07xxxxxxxx" name="phone" pattern="[0][0-9]{9}" required>
+                        </div>
+                    </div>
+
+                <div class="row row-space">
+
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label">Faculty<span class="required_field"> *</span></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="faculty" value="" required>
+                                    <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
+                                    <option value="Architecture">Faculty of Architecture</option>
+                                    <option value="Business">Faculty of Business</option>
+                                    <option value="Engineering">Faculty of Engineering</option>
+                                    <option value="IT">Faculty of Information Technology</option>
+                                    <option value="ITUM">Institute of Technology</option>
+                                    <option value="Medicine">Faculty of Medicine</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label">Batch<span class="required_field"> *</span></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="batch" value="" required>
+                                    <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
+                                    <option value="18">18 Batch</option>
+                                    <option value="19">19 Batch</option>
+                                    <option value="20">20 Batch</option>
+                                    <option value="21">21 Batch</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div>
+                        <div class="input-group">
+                            <label class="label">Why do you want to join AIESEC?<span class="required_field"> *</span></label>
+                            <input class="input--style-4" name="why" required>
                         </div>
                     </div>
 
