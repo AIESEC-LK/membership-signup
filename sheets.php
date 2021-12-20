@@ -30,7 +30,7 @@ function append($values){
     //Append to all sheet
     $result = $sheet_service->spreadsheets_values->append($spreadsheetId, $range, $body, $params);
 
-    if($result->getUpdates()->getUpdatedCells() == 9){
+    if($result->getUpdates()->getUpdatedCells() == 12){
         return true;
     }
 

@@ -10,6 +10,9 @@ $last_name = $_POST['last_name'];
 $dob = $_POST['dob'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
+$faculty = $_POST['faculty'];
+$batch = $_POST['batch'];
+$why = $_POST['why'];
 $preferred_contact = $_POST['preferred_contact'];
 $university = $_POST['university'];
 $employment_status = $_POST['employment_status'];
@@ -58,20 +61,27 @@ $home_lc_ids = array(
     "7673" => "2188"    // SLIIT
 );
 
+$date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
+$timestamp = $date->format('Y-m-d H:i:s');
+
 try {
     append([[
+        $timestamp,
         $first_name . " " . $last_name,
         $dob,
         $email,
         $phone,
         $remap[$preferred_contact],
         $remap[$university],
+        $faculty,
+        $batch,
+        $why,
         $remap[$employment_status],
         $remap[$motivation],
         $remap[$referral]
     ]]);
 } catch (Exception $e) {
-    $output = json_encode(array('errors' => [array('message' => "Unable to remap.")]));
+    $output = json_encode(array('errors' => [array('message' => "Unable to remap.", 'actual' => $e->getMessage())]));
     die($output);
 }
 

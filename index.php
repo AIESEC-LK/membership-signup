@@ -199,19 +199,6 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                     </div>
 
                     <div class="input-group">
-                        <label class="label">What is the most effective way to contact you?<span class="required_field"> *</span></label>
-                        <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="preferred_contact" value="" required>
-                                <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
-                                <option value="21794">Email</option>
-                                <option value="21792">WhatsApp</option>
-                            </select>
-                            <div class="select-dropdown"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="input-group">
                         <label class="label">University or Institute<span class="required_field"> *</span></label>
                         <div class="rs-select2 js-select-simple select--no-search">
                             <select name="university" required>
@@ -223,6 +210,44 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <option value=7670>University of Sri Jayewardenepura</option>
                                 <option value=7672>University of Ruhuna</option>
                                 <option value=7673>Sri Lanka Institute of Information Technology</option>
+                            </select>
+                        <div class="select-dropdown"></div>
+                    </div>
+                </div>
+
+                    <div class="row row-space">
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Faculty<span class="required_field"> *</span></label>
+                                <input class="input--style-4" name="faculty" required>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Batch<span class="required_field"> *</span></label>
+                                <input class="input--style-4" name="batch" required>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="input-group">
+                            <label class="label">Why do you want to join AIESEC?<span class="required_field"> *</span></label>
+                            <input class="input--style-4" name="why" required>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label class="label">What is the most effective way to contact you?<span class="required_field"> *</span></label>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="preferred_contact" value="" required>
+                                <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
+                                <option value="21794">Email</option>
+                                <option value="21792">WhatsApp</option>
                             </select>
                             <div class="select-dropdown"></div>
                         </div>
