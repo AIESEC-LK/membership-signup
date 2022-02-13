@@ -146,7 +146,7 @@ curl_setopt($api_call, CURLOPT_HTTPHEADER, array(
     "Content-Type: application/json",
     "Content-Length: " . strlen($json_payload),
     "Authorization: " . $config["auth_token"]
-    ),
+    )
 );
 
 $result = curl_exec($api_call);
