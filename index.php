@@ -210,6 +210,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                                 <option value=7670>University of Sri Jayewardenepura</option>
                                 <option value=7672>University of Ruhuna</option>
                                 <option value=7673>Sri Lanka Institute of Information Technology</option>
+                                <option value=29287>National School of Business Management</option>
                             </select>
                         <div class="select-dropdown"></div>
                     </div>
