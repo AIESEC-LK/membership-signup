@@ -28,6 +28,7 @@ $remap = array(
     "7670"  => "USJ",
     "7672"  => "Ruhuna",
     "7673"  => "SLIIT",
+    "29287"  => "NSBM",
     "21790" => "Unemployed",
     "21789" => "Employed",
     "21791" => "Self-Employed",
@@ -58,7 +59,8 @@ $home_lc_ids = array(
     "7671" => "2204",   // Kandy
     "7670" => "221",    // USJ
     "7672" => "2175",   // Ruhuna
-    "7673" => "2188"    // SLIIT
+    "7673" => "2188",    // SLIIT
+    "7674" => "2186"    // NSBM
 );
 
 $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
