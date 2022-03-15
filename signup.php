@@ -60,7 +60,7 @@ $home_lc_ids = array(
     "7670" => "221",    // USJ
     "7672" => "2175",   // Ruhuna
     "7673" => "2188",    // SLIIT
-    "7674" => "2186"    // NSBM
+    "29287" => "2186"    // NSBM
 );
 
 $date = new DateTime("now", new DateTimeZone('Asia/Colombo') );
