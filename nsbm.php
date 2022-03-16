@@ -3,12 +3,6 @@
 $background = "background.jpg";
 $logo = "aiesec.png";
 $color = "#037ef3";
-
-?>
-
-
-<?php
-
 $entity = "Other";
 if (isset($_GET['entity'])){
     $entity = $_GET['entity'];
@@ -165,6 +159,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                             <div class="input-group">
                                 <label class="label">First Name<span class="required_field"> *</span></label>
                                 <input class="input--style-4" type="text" name="first_name" required >
+                                <input class="input--style-4" type="hidden" name="university" value=29287 required >
                             </div>
                         </div>
                         <div class="col-2">
@@ -186,7 +181,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                     <div>
                         <div class="input-group">
                             <label class="label">Email Address<span class="required_field"> *</span></label>
-                            <input class="input--style-4" type="email" name="email" required >
+                            <input class="input--style-4" type="email" name="email" required>
                         </div>
                     </div>
 
@@ -198,41 +193,42 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                         </div>
                     </div>
 
-                    <div class="input-group">
-                        <label class="label">University or Institute<span class="required_field"> *</span></label>
-                        <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="university" required>
-                                <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
-                                <option value=7667>University of Colombo</option>
-                                <option value=7668>University of Kelaniya</option>
-                                <option value=7669>University of Moratuwa</option>
-                                <option value=7671>University of Peradeniya</option>
-                                <option value=7670>University of Sri Jayewardenepura</option>
-                                <option value=7672>University of Ruhuna</option>
-                                <option value=7673>Sri Lanka Institute of Information Technology</option>
-                                <option value=29287>National School of Business Management</option>
-                            </select>
-                        <div class="select-dropdown"></div>
+                <div class="row row-space">
+
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label">Faculty<span class="required_field"> *</span></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="faculty" value="" required>
+                                    <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
+                                    <option value="Business Management">Faculty of Business Management</option>
+                                    <option value="Computing">Faculty of Computing</option>
+                                    <option value="Engineering">Faculty of Engineering</option>
+                                    <option value="Science">Faculty of Science</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="input-group">
+                            <label class="label">Batch<span class="required_field"> *</span></label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="batch" value="" required>
+                                    <option disabled="disabled" selected="selected" value="" hidden>Choose option</option>
+                                    <option value="1st year">1st Year</option>
+                                    <option value="2nd year">2nd Year</option>
+                                    <option value="3rd year">3rd Year</option>
+                                    <option value="4th year">4th Year</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                    <div class="row row-space">
-
-                        <div class="col-2">
-                            <div class="input-group">
-                                <label class="label">Faculty<span class="required_field"> *</span></label>
-                                <input class="input--style-4" name="faculty" required>
-                            </div>
-                        </div>
-
-                        <div class="col-2">
-                            <div class="input-group">
-                                <label class="label">Batch<span class="required_field"> *</span></label>
-                                <input class="input--style-4" name="batch" required>
-                            </div>
-                        </div>
-
-                    </div>
 
                     <div>
                         <div class="input-group">
@@ -240,7 +236,6 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                             <input class="input--style-4" name="why" required>
                         </div>
                     </div>
-
 
                     <div class="input-group">
                         <label class="label">What is the most effective way to contact you?<span class="required_field"> *</span></label>
@@ -363,7 +358,7 @@ width:100%; height:100%; z-index:999; text-align: center; vertical-align: middle
                     $("#overlay").fadeOut(300);
                     let response = {};
                     try {
-                        response = JSON.parse(data)
+                        response = JSON.parse(data);
                     } catch (e) {
                         Swal.fire({
                             title: "Error",
